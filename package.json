@@ -1,0 +1,10 @@
+{
+  "name": "mindai-software-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'No linting tool configured yet'",
+    "format": "echo 'No formatting tool configured yet'",
+    "test": "echo 'No tests configured yet'"
+  }
+}
