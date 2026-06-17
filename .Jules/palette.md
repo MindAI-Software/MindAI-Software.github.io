@@ -1,0 +1,11 @@
+## 2025-03-18 - [Repository Bootstrapping UX]
+**Learning:** Empty repositories intended for GitHub Pages create a poor user experience. Bootstrapping a simple, accessible landing page provides immediate value.
+**Action:** Prioritize creating a semantic `index.html` for new GitHub Pages repos.
+
+## 2025-03-18 - [Color Contrast for Accessibility]
+**Learning:** Using white text on an orange background (#ff9800) often results in poor contrast (approx. 2.27:1), failing WCAG AA standards. Switching to dark text (#1a1a1a) significantly improves readability.
+**Action:** Always check color contrast for branding colors, especially with white text on bright backgrounds.
+
+## 2026-06-16 - [Tactile Feedback Polish]
+**Learning:** High-quality micro-interactions require synchronization between the container (button) and its internal elements (SVG icons). Only scaling the container can feel "disconnected" if the icon doesn't respond similarly during the `:active` state.
+**Action:** Always sync `:active` transforms between interactive containers and their internal visual indicators (like SVG icons) to provide a cohesive tactile response.
