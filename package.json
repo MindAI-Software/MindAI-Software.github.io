@@ -1,0 +1,10 @@
+{
+  "name": "mindai-software-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm dlx htmlhint index.html",
+    "format": "pnpm dlx prettier --write index.html",
+    "test": "echo 'No tests configured yet'"
+  }
+}
