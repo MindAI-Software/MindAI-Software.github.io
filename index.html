@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MindAI Software - Empowering Intelligence through Innovative Code. We build accessible, high-performance software that bridges human creativity and AI."
+    />
+    <meta property="og:title" content="MindAI Software" />
+    <meta
+      property="og:description"
+      content="Empowering Intelligence through Innovative Code. We build accessible, high-performance software that bridges human creativity and AI."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MindAI Software" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="MindAI Software" />
+    <meta
+      name="twitter:description"
+      content="Empowering Intelligence through Innovative Code. We build accessible, high-performance software that bridges human creativity and AI."
+    />
+    <meta
+      name="theme-color"
+      content="#ff9800"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1a1a1a"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>MindAI Software</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        scroll-behavior: smooth;
+        scrollbar-color: #ff9800 transparent;
+        scrollbar-width: thin;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff9800;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ffa726;
+      }
+      ::selection {
+        background: #ff9800;
+        color: #1a1a1a;
+      }
+      header ::selection {
+        background: #1a1a1a;
+        color: #ff9800;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        color: #333;
+        margin: 0;
+        text-align: center;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      h1,
+      h2 {
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      header {
+        background: #ff9800;
+        color: #1a1a1a;
+        padding: 3rem 1rem;
+      }
+      .brand-link {
+        color: inherit;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 4px;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+      }
+      .brand-link:focus-visible {
+        outline: 3px solid #1a1a1a;
+        outline-offset: 4px;
+        transform: translateY(-2px);
+      }
+      .brain-emoji {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        user-select: none;
+      }
+      .brand-link:hover .brain-emoji,
+      .brand-link:focus-visible .brain-emoji {
+        transform: scale(1.2) rotate(15deg);
+      }
+      .brand-link:active {
+        transform: scale(0.96);
+      }
+      .brain-emoji.bounce-active {
+        animation: brain-bounce-spin 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      @keyframes brain-bounce-spin {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        30% {
+          transform: scale(1.4) rotate(-20deg) translateY(-8px);
+        }
+        60% {
+          transform: scale(1.2) rotate(380deg) translateY(2px);
+        }
+        100% {
+          transform: scale(1) rotate(360deg) translateY(0);
+        }
+      }
+      .header-content h1,
+      .header-content p,
+      main h2,
+      main p,
+      .cta {
+        animation-fill-mode: both;
+        animation-duration: 0.6s;
+        animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .header-content h1 {
+        animation-name: header-fade-in;
+        animation-delay: 0s;
+      }
+      .header-content p {
+        animation-name: header-fade-in;
+        animation-delay: 0.1s;
+      }
+      main h2 {
+        animation-name: content-fade-in;
+        animation-delay: 0.2s;
+      }
+      main p {
+        animation-name: content-fade-in;
+        animation-delay: 0.3s;
+      }
+      .cta-group .cta:nth-child(1) {
+        animation-name: content-fade-in;
+        animation-delay: 0.4s;
+      }
+      .cta-group .cta:nth-child(2) {
+        animation-name: content-fade-in;
+        animation-delay: 0.5s;
+      }
+      @keyframes header-fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes content-fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      main {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        flex: 1;
+        scroll-margin-top: 2rem;
+      }
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #1a1a1a;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition:
+          transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+          box-shadow 0.3s ease,
+          outline 0.2s ease,
+          background-color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        font-family: inherit;
+        user-select: none;
+      }
+      .cta svg {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .cta:hover,
+      .cta:focus-visible {
+        background-color: #333;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .cta:hover svg,
+      .cta:focus-visible svg {
+        transform: scale(1.15) rotate(12deg);
+      }
+      .cta:focus-visible {
+        outline: 3px solid #1a1a1a;
+        outline-offset: 2px;
+      }
+      .cta:active {
+        transform: translateY(0) scale(0.96);
+        box-shadow: none;
+      }
+      .cta:active svg {
+        transform: scale(0.96);
+      }
+      .cta-secondary {
+        background: white;
+        color: #1a1a1a;
+        border: 2px solid #1a1a1a;
+        position: relative;
+      }
+      .cta-secondary:hover,
+      .cta-secondary:focus-visible {
+        background-color: #f5f5f5;
+      }
+      .icon-wrapper {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .check-icon {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0.5);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .share-icon {
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+      .cta-secondary[data-state="copied"] .share-icon {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      .cta-secondary[data-state="copied"] .check-icon {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      .share-feedback {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        color: #1a1a1a;
+        font-weight: normal;
+        opacity: 0;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+        pointer-events: none;
+      }
+      .cta-secondary[data-state="copied"] .share-feedback {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-5px);
+      }
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #1a1a1a;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 0 0 6px 6px;
+        font-weight: bold;
+        z-index: 100;
+        border: 2px solid #ff9800;
+        border-top: none;
+        transition:
+          top 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          box-shadow 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+      }
+      .skip-link svg {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .skip-link:hover {
+        background-color: #333;
+      }
+      .skip-link:focus-visible {
+        top: 0;
+        outline: 3px solid #1a1a1a;
+        outline-offset: 2px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+      .skip-link:focus-visible svg {
+        transform: translateY(2px);
+      }
+      .skip-link:active {
+        transform: translateX(-50%) scale(0.96);
+        box-shadow: none;
+      }
+      .skip-link:active svg {
+        transform: scale(0.96);
+      }
+      kbd {
+        display: inline-block;
+        transition:
+          transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1),
+          background-color 0.1s ease,
+          color 0.1s ease,
+          border-color 0.1s ease;
+      }
+      kbd.pressed {
+        transform: scale(0.8);
+        background-color: #ff9800 !important;
+        color: #1a1a1a !important;
+        border-color: #ff9800 !important;
+      }
+      footer {
+        padding: 2rem 0;
+        color: #4b4b4b;
+        font-size: 0.9rem;
+        animation: content-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #1a1a1a;
+          color: #e0e0e0;
+        }
+        footer {
+          color: #a0a0a0;
+        }
+        .cta {
+          background: #ff9800;
+          color: #1a1a1a;
+        }
+        .cta:hover,
+        .cta:focus-visible {
+          background-color: #ffa726;
+          box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+        }
+        .cta:focus-visible {
+          outline-color: #ff9800;
+        }
+        .cta-secondary {
+          background: transparent;
+          color: #ff9800;
+          border-color: #ff9800;
+        }
+        .cta-secondary:hover,
+        .cta-secondary:focus-visible {
+          background-color: rgba(255, 152, 0, 0.1);
+        }
+        .share-feedback {
+          color: #ff9800;
+        }
+        .cta::selection,
+        .cta *::selection {
+          background: #1a1a1a;
+          color: #ff9800;
+        }
+        .skip-link:focus-visible {
+          outline-color: #ff9800;
+          box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+        }
+        kbd.pressed {
+          background-color: #1a1a1a !important;
+          color: #ff9800 !important;
+          border-color: #1a1a1a !important;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        :root {
+          scroll-behavior: auto !important;
+        }
+        *,
+        ::before,
+        ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+        .header-content h1,
+        .header-content p,
+        main h2,
+        main p,
+        .cta,
+        footer {
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">
+      Skip to main content
+      <svg
+        height="16"
+        width="16"
+        viewBox="0 0 16 16"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+        />
+      </svg>
+    </a>
+    <header>
+      <div class="header-content">
+        <h1>
+          <a href="." class="brand-link" rel="home" aria-current="page">
+            MindAI Software
+            <span class="brain-emoji" aria-hidden="true">🧠</span>
+          </a>
+        </h1>
+        <p>Empowering Intelligence through Innovative Code</p>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section aria-labelledby="hero-heading">
+        <h2 id="hero-heading">Delightful AI Solutions</h2>
+        <p>
+          We build accessible, high-performance software that bridges human
+          creativity and AI.
+        </p>
+        <div class="cta-group">
+          <a
+            id="githubLink"
+            href="https://github.com/MindAI-Software"
+            class="cta"
+            aria-label="Explore GitHub projects on our profile (opens in a new tab) (Press G)"
+            target="_blank"
+            rel="noopener noreferrer me"
+          >
+            <svg
+              height="20"
+              width="20"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+            Explore GitHub
+            <kbd
+              style="
+                font-size: 0.75rem;
+                padding: 2px 5px;
+                border: 1px solid currentColor;
+                border-radius: 4px;
+                margin-left: 4px;
+                font-family: monospace;
+              "
+              >G</kbd
+            >
+          </a>
+          <button
+            id="shareBtn"
+            type="button"
+            class="cta cta-secondary"
+            aria-label="Share this website (Press S)"
+          >
+            <span class="icon-wrapper">
+              <svg
+                class="share-icon"
+                height="20"
+                width="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                <polyline points="16 6 12 2 8 6"></polyline>
+                <line x1="12" y1="2" x2="12" y2="15"></line>
+              </svg>
+              <svg
+                class="check-icon"
+                height="20"
+                width="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            Share
+            <kbd
+              style="
+                font-size: 0.75rem;
+                padding: 2px 5px;
+                border: 1px solid currentColor;
+                border-radius: 4px;
+                margin-left: 4px;
+                font-family: monospace;
+              "
+              >S</kbd
+            >
+            <span
+              class="share-feedback"
+              aria-live="polite"
+              aria-atomic="true"
+            ></span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 MindAI Software</p>
+    </footer>
+    <script>
+      // Interactive brand link click handler to prevent reload and offer a rich tactile scroll-to-top experience
+      const brandLink = document.querySelector(".brand-link");
+      if (brandLink) {
+        brandLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+
+          const brain = brandLink.querySelector(".brain-emoji");
+          if (brain) {
+            brain.classList.add("bounce-active");
+            setTimeout(() => {
+              brain.classList.remove("bounce-active");
+            }, 600);
+          }
+
+          if (navigator.vibrate) {
+            navigator.vibrate(15);
+          }
+
+          const skipLink = document.querySelector(".skip-link");
+          if (skipLink) {
+            skipLink.focus();
+          }
+        });
+      }
+
+      // Tab visibility title transitions to enhance engagement and user recall
+      const originalTitle = document.title;
+      let titleTimeout = null;
+
+      document.addEventListener("visibilitychange", () => {
+        if (titleTimeout) {
+          clearTimeout(titleTimeout);
+          titleTimeout = null;
+        }
+
+        if (document.hidden) {
+          document.title = "🧠 Come back to MindAI!";
+        } else {
+          document.title = "🧠 Welcome back!";
+          titleTimeout = setTimeout(() => {
+            document.title = originalTitle;
+            titleTimeout = null;
+          }, 1500);
+        }
+      });
+
+      const shareBtn = document.getElementById("shareBtn");
+      const shareFeedback = shareBtn.querySelector(".share-feedback");
+      let shareTimeout;
+
+      function showFeedback(message, label) {
+        if (shareTimeout) clearTimeout(shareTimeout);
+
+        shareFeedback.textContent = message;
+        shareBtn.setAttribute("aria-label", label);
+        shareBtn.setAttribute("data-state", "copied");
+
+        if (navigator.vibrate) navigator.vibrate(10);
+
+        shareTimeout = setTimeout(() => {
+          shareBtn.removeAttribute("data-state");
+          shareBtn.setAttribute("aria-label", "Share this website (Press S)");
+          shareFeedback.textContent = "";
+        }, 2000);
+      }
+
+      shareBtn.addEventListener("click", async () => {
+        const shareData = {
+          title: "MindAI Software",
+          text: "Check out MindAI Software - Empowering Intelligence through Innovative Code.",
+          url: window.location.href,
+        };
+
+        if (
+          navigator.share &&
+          navigator.canShare &&
+          navigator.canShare(shareData)
+        ) {
+          try {
+            await navigator.share(shareData);
+            showFeedback("Shared!", "Link shared successfully");
+          } catch (err) {
+            if (err.name !== "AbortError") copyToClipboard();
+          }
+        } else {
+          copyToClipboard();
+        }
+      });
+
+      async function copyToClipboard() {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          showFeedback("Copied!", "Link copied to clipboard");
+        } catch (err) {
+          console.error("Failed to copy: ", err);
+          showFeedback("Failed!", "Failed to copy link");
+        }
+      }
+
+      // Centralized tactile feedback for all shortcut indicator keycaps (<kbd>)
+      document.querySelectorAll(".cta").forEach((cta) => {
+        cta.addEventListener("click", () => {
+          const kbd = cta.querySelector("kbd");
+          if (kbd && !kbd.classList.contains("pressed")) {
+            kbd.classList.add("pressed");
+            setTimeout(() => {
+              kbd.classList.remove("pressed");
+            }, 150);
+          }
+        });
+      });
+
+      // Global keyboard shortcuts: 'S' for share, 'G' for GitHub link
+      window.addEventListener("keydown", (e) => {
+        const key = e.key.toLowerCase();
+        if (
+          (key === "s" || key === "g") &&
+          !e.ctrlKey &&
+          !e.altKey &&
+          !e.metaKey &&
+          !e.isComposing
+        ) {
+          const activeEl = document.activeElement;
+          const isInput =
+            activeEl &&
+            (activeEl.tagName === "INPUT" ||
+              activeEl.tagName === "TEXTAREA" ||
+              activeEl.getAttribute("contenteditable") === "true");
+          if (!isInput) {
+            e.preventDefault();
+            if (key === "s") {
+              shareBtn.click();
+            } else if (key === "g") {
+              const githubLink = document.getElementById("githubLink");
+              if (githubLink) githubLink.click();
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
